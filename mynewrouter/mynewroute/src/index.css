@@ -6,9 +6,100 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1e272e;
+
 }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-top: 20px;
+  padding-left: 0;
+  overflow: hidden;
+  background-color: #1e272e;
+}
+li {
+  float: left;
+}
+
+li .link{
+
+  display: block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.header{
+  background-color: #1e272e;
+  height:40px;
+
+
+}
+.link{
+  color: #f7f1e3;
+}
+.link:hover{
+  font-size: 30px;
+  font-weight: 700;
+}
+.Home{
+  background-color: #84817a;
+   width: 100vw;
+    height: 100vh;
+}
+
+.services{
+  background-color: #d1ccc0;
+  width: 100vw;
+   height: 100vh;
+}
+.Contact{
+  background-color: #227093;
+  width: 100vw;
+   height: 100vh;
+}
+.Next{
+  background-color: #b33939;
+  width: 100vw;
+   height: 100vh;
+}
+#cf {
+  position:relative;
+  margin:0 auto;
+}
+@keyframes cfFadeInOut {
+  0% {
+  opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+
+#cf img.top {
+animation-name: cf3FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 2s;
+animation-direction: alternate;
+}
+
+#cf img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }

@@ -7,6 +7,8 @@ import Contact from './Contact';
 import Services from './Services';
 import Next from './Next';
 import Nextnext from './Nextnext';
+import './App.css';
+
 
 import * as serviceWorker from './serviceWorker';
 import {
@@ -18,19 +20,21 @@ import {
 ReactDOM.render(<Router>
   <div>
     <ul>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/contact">Contact</Link></li>
-      <li><Link to="/services">Services</Link></li>
-      <li><Link to="/next">Next</Link></li>
+      <div className="header">
+      <li><Link className="link" to="/">Home</Link></li>
+      <li><Link className="link" to="/contact">Contact</Link></li>
+      <li><Link className="link"  to="/services">Services</Link></li>
+      <li><Link className="link" to="/next">Next</Link></li>
+      </div>
+      <br />
+      <br />
 
-      <hr />
       <Route exact path="/" component={ Home } />
       <Route path="/contact" component={ Contact } />
       <Route path="/services" component={ Services } />
       <Route path="/next" component={ Next }>
         <Route path="/Next/123" component={ Nextnext } />
       </Route>
-
 
 
     </ul>

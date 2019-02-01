@@ -4,10 +4,10 @@ import React , { Component } from 'react';
 class Services extends Component {
   render(){
     return(
-      <div>
+      <div className="services">
           I am from Services.
       </div>
     );
   }
 }
-export default Services; 
+export default Services;

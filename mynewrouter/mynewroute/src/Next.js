@@ -5,12 +5,14 @@ import { Link } from 'react-router-dom';
 class Next extends Component {
   render(){
     return(
-      <div>
+      <div className="Next">
           I am from Next.
-          <ul>
+      {  /*  <ul>
             <li><Link to="/Next/123"> Nextnext </Link></li>
           </ul>
-          {this.props.children}
+          {//this.props.children
+          }
+        */}
       </div>
 
     );
