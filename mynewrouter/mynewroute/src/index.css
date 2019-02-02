@@ -74,32 +74,31 @@ code {
 }
 @keyframes cfFadeInOut {
   0% {
-  opacity:1;
-}
-45% {
-opacity:1;
-}
-55% {
-opacity:0;
-}
-100% {
-opacity:0;
-}
+    opacity:1;
+  }
+  17% {
+    opacity:1;
+  }
+  25% {
+    opacity:0;
+  }
+  92% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
 }
 
 #cf img.top {
-animation-name: cf3FadeInOut;
-animation-timing-function: ease-in-out;
-animation-iteration-count: infinite;
-animation-duration: 2s;
-animation-direction: alternate;
+  animation-delay: 6s;
 }
-
-#cf img {
-  position:absolute;
-  left:0;
-  -webkit-transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -o-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
+#cf img.bottom {
+  animation-delay: 4s;
+}
+#cf img.bottom1 {
+  animation-delay: 2s;
+}
+#cf img.bottom2 {
+  animation-delay: 0;
 }
