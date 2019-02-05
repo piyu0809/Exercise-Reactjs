@@ -24,13 +24,11 @@
 .search-box{
 align-self: center;
 height: 52px;
-width: 622px;
-font-size: 32px;
+width: 722px;
+font-size: 28px;
 }
-.form{
-  height: 32;
-  width: 422;
-
+input[type=text]:focus {
+  border: 3px solid #555;
 }
 @keyframes App-logo-spin {
   from {

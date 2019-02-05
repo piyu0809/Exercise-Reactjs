@@ -66,8 +66,10 @@ class App extends Component {
               type="text"
               onChange = {this.update}
               value={this.state.url}
-              placeholder = "Type a url..." />
+              placeholder = "Enter the URL and hit enter." />
         </form>
+        <br />
+        <img src={this.state.url} alt="new" height="500" width="700" />
         { names.map((name,index) => {
            return (
              <div key={index}>
