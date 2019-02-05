@@ -13,13 +13,17 @@ class App extends Component {
     this.state = {
       name:[],
       value:[],
-      name1:''
+      name1:'',
+      url: ''
     };
+    this.update = this.update.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.apiCall = this.apiCall.bind(this);
   }
-  componentWillMount(){
+  apiCall(url){
   app.models.initModel({id: Clarifai.GENERAL_MODEL, version: "aa7f35c01e0642fda5cf400f543e7c40"})
       .then(generalModel => {
-        return generalModel.predict("https://samples.clarifai.com/metro-north.jpg");
+        return generalModel.predict(url);
       })
       .then(response => {
         var concepts = response['outputs'][0]['data']['concepts']
@@ -30,32 +34,40 @@ class App extends Component {
             value:[...this.state.value,concept.value]
           })
         })
-        console.log(this.state.name)
+        console.log(this.state.name);
 
         })
+      }
 
 
-    }
+      update(event){
+        this.setState({
+          url: event.target.value
+        })
+      }
+      handleSubmit(e){
+        e.preventDefault();
+        console.log(this.state.url);
+        this.apiCall(this.state.url);
+        
+      }
   render() {
     let names = this.state.name;
     let values = this.state.value;
     return (
       <div className="App">
-        <input type="text" placeholder="Enter the image url" />
-
+        <form className = "send-message-form"
+            onSubmit = {this.handleSubmit}>
+            <input
+              type="text"
+              onChange = {this.update}
+              value={this.state.url}
+              placeholder = "Type a url..." />
+        </form>
         { names.map((name,index) => {
            return (
              <div key={index}>
                <div >{name}</div>
-                 { values.map((value,index) => {
-                    return (
-                      <div key={index}>
-                        <div >{value}</div>
-
-                      </div>
-                    )
-                  })
-                }
              </div>
            )
          })
