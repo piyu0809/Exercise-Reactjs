@@ -49,16 +49,20 @@ class App extends Component {
         e.preventDefault();
         console.log(this.state.url);
         this.apiCall(this.state.url);
-        
+
       }
   render() {
     let names = this.state.name;
     let values = this.state.value;
     return (
       <div className="App">
-        <form className = "send-message-form"
+        <h1>Get the caption for your image.</h1>
+        <p>Enter the url of the image in the search box </p>
+        <form
+          className = "form"
             onSubmit = {this.handleSubmit}>
             <input
+              className = "search-box"
               type="text"
               onChange = {this.update}
               value={this.state.url}

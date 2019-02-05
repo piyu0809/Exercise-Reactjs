@@ -21,7 +21,17 @@
 .App-link {
   color: #61dafb;
 }
+.search-box{
+align-self: center;
+height: 52px;
+width: 622px;
+font-size: 32px;
+}
+.form{
+  height: 32;
+  width: 422;
 
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
