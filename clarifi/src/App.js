@@ -21,20 +21,22 @@ class App extends Component {
     this.apiCall = this.apiCall.bind(this);
   }
   apiCall(url){
+    console.log("api called",url);
   app.models.initModel({id: Clarifai.GENERAL_MODEL, version: "aa7f35c01e0642fda5cf400f543e7c40"})
       .then(generalModel => {
         return generalModel.predict(url);
       })
       .then(response => {
         var concepts = response['outputs'][0]['data']['concepts']
-
         concepts.map(concept =>{
           this.setState({
             name:[...this.state.name,concept.name],
             value:[...this.state.value,concept.value]
           })
+          console.log(this.state.name);
         })
-        console.log(this.state.name);
+
+
 
         })
       }

@@ -23,6 +23,7 @@ color:#ffb8b8;
   color: white;
 }
 
+
 .App-link {
   color: #61dafb;
 }
@@ -34,7 +35,6 @@ font-size: 28px;
 border-radius: 50px;
 }
 input[type=text]:focus {
-  background-color: #b2bec3;
   outline: none;
 }
 @keyframes App-logo-spin {
